@@ -1,6 +1,7 @@
 import express from "express";
 import { WebClient } from "@slack/web-api";
 import * as dotenv from "dotenv";
+import cors from "cors";
 
 const app = express();
 const port = 3000;
@@ -8,6 +9,8 @@ const port = 3000;
 dotenv.config();
 
 const slackClient = new WebClient(process.env.SLACK_BOT_USER_TOKEN);
+
+app.use(cors());
 
 app.get("/emojis", async (req, res) => {
   try {

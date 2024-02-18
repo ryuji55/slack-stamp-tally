@@ -13,6 +13,8 @@
   "license": "ISC",
   "dependencies": {
     "@slack/web-api": "^7.0.2",
+    "@types/cors": "^2.8.17",
+    "cors": "^2.8.5",
     "dotenv": "^16.4.4",
     "express": "^4.18.2"
   },
